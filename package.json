@@ -4,17 +4,21 @@
   "description": "Client for Magnolia RESTful API",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec test/*"
+    "test": "./node_modules/mocha/bin/mocha -R spec test/*",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.4.6",
     "lwip": "0.0.9",
-    "node-fetch": "^1.6.3"
+    "node-fetch": "^1.6.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "mocha": "^3.1.2",
     "should": "^11.1.1"
-  }
+  },
+  "snyk": true
 }
